@@ -7,6 +7,7 @@ before_install:
 - cd install-tl-*
 - echo "selected_scheme scheme-full" > profile
 - sudo ./install-tl -profile profile
+- PATH=/usr/local/texlive/2017/bin/i386-linux:$PATH; export PATH 
 - cd ..
 - sudo wget -O /usr/bin/latexmk http://mirrors.ctan.org/support/latexmk/latexmk.pl
 - sudo chmod +x /usr/bin/latexmk
