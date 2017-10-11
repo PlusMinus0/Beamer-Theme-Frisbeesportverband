@@ -8,7 +8,5 @@ before_install:
 - echo "selected_scheme scheme-full" > profile
 - sudo ./install-tl -profile profile
 - cd ..
-- sudo wget -O /usr/bin/latexmk http://mirrors.ctan.org/support/latexmk/latexmk.pl
-- sudo chmod +x /usr/bin/latexmk
 script:
-- latexmk -lualatex -interaction=nonstopmode example.tex
+- latexmk -pdflua -interaction=nonstopmode example.tex
