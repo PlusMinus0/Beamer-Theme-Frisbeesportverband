@@ -1,0 +1,23 @@
+\mode<presentation>
+
+
+% Title page
+\defbeamertemplate*{title page}{frisbeesportverband}[1][]
+{ 
+  \vfill
+  \begin{beamercolorbox}[wd=\pagewidth, center]{title page header}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[wd=\pagewidth, center]{author}
+    \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+  \vskip0.2cm%
+  \begin{beamercolorbox}[wd=\pagewidth, center]{date}
+    \usebeamerfont{date}\insertdate%
+  \end{beamercolorbox}
+  \vfill
+}
+
+\mode
+<all>
