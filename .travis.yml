@@ -1,14 +1,15 @@
 sudo: required
 dist: xenial
+
 addons:
-    apt:
-        packages:
-            - texlive-fonts-recommended
-            - texlive-latex-extra
-            - texlive-fonts-extra
-            - dvipng
-            - texlive-latex-recommended
-            - texlive-luatex
-            - latexmk
+  apt:
+    packages:
+    - texlive-fonts-recommended
+    - texlive-latex-extra
+    - texlive-fonts-extra
+    - dvipng
+    - texlive-latex-recommended
+    - texlive-luatex
+    - latexmk
 script:
 - latexmk -lualatex -interaction=nonstopmode example.tex
