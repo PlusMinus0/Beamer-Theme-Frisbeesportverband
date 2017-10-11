@@ -2,6 +2,8 @@ dist: xenial
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-luatex latexmk
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-luatex
+- sudo wget -P /usr/bin/ -O latexmk http://mirrors.ctan.org/support/latexmk/latexmk.pl
+- sudo chmod +x /usr/bin/latexmk
 script:
 - latexmk -lualatex -interaction=nonstopmode example.tex
