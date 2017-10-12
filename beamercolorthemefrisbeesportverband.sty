@@ -5,6 +5,12 @@
 \definecolor{dfvbluealt}{RGB}{32,0,128}
 \definecolor{dfvgrey}{RGB}{204,204,204}
 
+% Palette
+\setbeamercolor{palette primary}{fg=dfvbluealt}
+\setbeamercolor{palette secondary}{fg=dfvblue}
+\setbeamercolor{palette tertiary}{fg=red}
+\setbeamercolor{palette quaternary}{fg=red}
+
 % Titlepage
 \setbeamercolor{title page header}{fg=black}
 \setbeamercolor{author}{fg=black}
@@ -22,10 +28,10 @@
 \setbeamercolor{block body}{bg=dfvgrey,fg=black}
 
 % Lists
-\setbeamercolor{itemize item}{bg=white,fg=dfvbluealt}
-\setbeamercolor{itemize subitem}{bg=white,fg=dfvblue}
-\setbeamercolor{enumerate item}{bg=white,fg=dfvbluealt}
-\setbeamercolor{enumerate subitem}{bg=white,fg=dfvblue}
-\setbeamercolor{item}{bg=white,fg=dfvbluealt}
+\setbeamercolor{itemize item}{parent=palette primary}
+\setbeamercolor{itemize subitem}{parent=palette secondary}
+\setbeamercolor{enumerate item}{parent=palette primary}
+\setbeamercolor{enumerate subitem}{parent=palette secondary}
+\setbeamercolor{item}{parent=palette primary}
 
 \mode<all>
