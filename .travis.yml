@@ -2,13 +2,15 @@ dist: xenial
 sudo: required
 dist: trusty
 before_install:
+- sudo wget --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 -t 5 -O /usr/bin/latexmk http://mirrors.ctan.org/support/latexmk/latexmk.pl
+- sudo chmod +x /usr/bin/latexmk
 - sudo wget -O texlive.tar.gz http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
 - tar -zxvf texlive.tar.gz
 - cd install-tl-*
 - echo "selected_scheme scheme-full" > profile
 - sudo ./install-tl -profile profile
 - export PATH="/usr/local/texlive/2017/bin/i386-linux:$PATH"
-- sudo find / -name latexmk
+- sudo find / -name lualatex
 - cd ..
 script:
 - latexmk -pdflua -interaction=nonstopmode example.tex
