@@ -11,4 +11,4 @@ addons:
       - latexmk
 
 script:
-- latexmk -lualatex -interaction=nonstopmode example.tex
+- latexmk -f -lualatex -interaction=nonstopmode example.tex
