@@ -6,6 +6,7 @@ addons:
   apt:
     update: true
     packages:
+      - latex-beamer
       - texlive-luatex
       - latexmk
 
