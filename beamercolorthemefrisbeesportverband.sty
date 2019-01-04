@@ -1,14 +1,22 @@
 \mode<presentation>
 
 % Colors
-\definecolor{dfvblue}{RGB}{52,0,204}
-\definecolor{dfvbluealt}{RGB}{32,0,128}
-\definecolor{dfvgrey}{RGB}{204,204,204}
+\definecolor{dfvblue}{HTML}{094CA0}
+\definecolor{dfvbluealt}{HTML}{042E63}
+%\definecolor{dfvgrey}{RGB}{204,204,204}
+\definecolor{dfvgrey}{HTML}{3E78C3}
+
+\definecolor{dfvlighter}{HTML}{3E78C3}
+\definecolor{dfvlight}{HTML}{1661C1}
+\definecolor{dfvbase}{HTML}{094CA0}
+\definecolor{dfvdark}{HTML}{063C81}
+\definecolor{dfvdarker}{HTML}{042E63}
+
 
 % Palette
 \setbeamercolor{palette primary}{fg=dfvbluealt}
 \setbeamercolor{palette secondary}{fg=dfvblue}
-\setbeamercolor{palette tertiary}{fg=red}
+\setbeamercolor{palette tertiary}{fg=dfvgrey}
 \setbeamercolor{palette quaternary}{fg=red}
 
 % Titlepage
@@ -18,8 +26,8 @@
 \setbeamercolor{date}{fg=black}
 
 % TOC
-\setbeamercolors{section in toc}{parent=palette primary}
-\setbeamercolors{subsection in toc}{parent=palette secondary}
+\setbeamercolor{section in toc}{parent=palette primary}
+\setbeamercolor{subsection in toc}{parent=palette secondary}
 
 % Header
 \setbeamercolor{frametitle}{bg=dfvbluealt,fg=white}

@@ -1,6 +1,7 @@
 \mode<presentation>
 
-\newcommand{\headerheight}{1.5cm}
+\newlength{\headerheight}
+\setlength{\headerheight}{1.5cm}
 
 \providecommand\insertframetitle{} 
 
@@ -8,7 +9,7 @@
 
 % Frame title
 \defbeamertemplate*{headline}{frisbeesportverband}[1][]
-{%
+{% TODO: no header on title page
   \leavevmode
   % \nointerlineskip
   % \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=\paperwidth]{frametitle}
@@ -19,10 +20,12 @@
   %   \includegraphics[height=\headerheight]{topright}
   % \end{beamercolorbox}
   \hbox{%
-  \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.25\paperwidth,center]{logo}
-    \includegraphics[height=\headerheight]{topleft}
+    \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.3\paperwidth,center]{logo}
+      \vbox to\headerheight{\vfil
+        \usebeamerfont{frametitle}\small{\beamer@shorttitle}%
+        \vfil}%
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.5\paperwidth,center]{frametitle}
+  \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.4\paperwidth,center]{frametitle}
     \vbox to\headerheight{\vfil
         \ifx\beamer@frametitle\@empty
         \usebeamerfont{frametitle}\insertinstitute%
@@ -31,11 +34,13 @@
         \fi
       \vfil}%
     \end{beamercolorbox}%
-    \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.25\paperwidth,center]{logo}
-    \includegraphics[height=\headerheight]{topright}
+    \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.3\paperwidth,center]{logo}
+      \vfil
+      \includegraphics[height=0.9\headerheight]{logo}
+      \vfil
   \end{beamercolorbox}
 }
-\rule{\paperwidth}{1pt}
+\textcolor{dfvdarker}{\rule{\paperwidth}{1pt}}
 }
 
 \defbeamertemplate*{footline}{frisbeesportverband}
