@@ -10,4 +10,4 @@ addons:
       - latexmk
 
 script:
-- latexmk -pdflua -interaction=nonstopmode example.tex
+- latexmk -lualatex -interaction=nonstopmode example.tex
