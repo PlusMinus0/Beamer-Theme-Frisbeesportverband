@@ -2,6 +2,6 @@ dist: xenial
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get install texlive-lua
+- sudo apt-get install -y texlive-lua
 script:
 - latexmk -pdflua -interaction=nonstopmode example.tex
