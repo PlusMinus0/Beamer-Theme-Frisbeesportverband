@@ -2,13 +2,6 @@ dist: xenial
 sudo: required
 dist: trusty
 before_install:
-- sudo wget -O texlive.tar.gz http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
-- tar -zxvf texlive.tar.gz
-- cd install-tl-*
-- echo "selected_scheme scheme-full" > profile
-- sudo ./install-tl -profile profile
-- export PATH="/usr/local/texlive/2017/bin/i386-linux:$PATH"
-- sudo find / -name latexmk
-- cd ..
+- sudo apt-get install texlive-lua
 script:
 - latexmk -pdflua -interaction=nonstopmode example.tex
