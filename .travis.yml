@@ -5,10 +5,8 @@ sudo: required
 addons:
   apt:
     update: true
-    source:
-      - sourceline: 'ppa:universe'
     packages:
-      - texlive-lua
+      - texlive-luatex
 
 script:
 - latexmk -pdflua -interaction=nonstopmode example.tex
