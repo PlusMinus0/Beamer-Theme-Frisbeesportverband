@@ -1,9 +1,12 @@
 dist: xenial
 language: minimal
+sudo: required
 
 addons:
   apt:
     update: true
+    source:
+      - sourceline: 'ppa:universe'
     packages:
       - texlive-lua
 
