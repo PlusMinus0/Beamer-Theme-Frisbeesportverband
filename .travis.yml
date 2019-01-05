@@ -13,6 +13,7 @@ addons:
       - texlive-luatex
       - latexmk
       - fonts-noto
+      - fonts-noto-mono
 
 script:
 - latexmk -f -lualatex -interaction=nonstopmode example.tex
