@@ -12,6 +12,7 @@ addons:
       - pgf
       - texlive-luatex
       - latexmk
+      - fonts-noto
 
 script:
 - latexmk -f -lualatex -interaction=nonstopmode example.tex
