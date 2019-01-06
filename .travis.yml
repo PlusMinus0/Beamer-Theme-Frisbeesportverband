@@ -11,6 +11,7 @@ addons:
       - texlive-math-extra
       - pgf
       - texlive-luatex
+      - biber
       - latexmk
       - fonts-noto
       - fonts-noto-mono
