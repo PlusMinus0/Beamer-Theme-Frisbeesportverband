@@ -22,7 +22,11 @@
   \hbox{%
     \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.3\paperwidth,center]{logo}
       \vbox to\headerheight{\vfil
+        \ifx\insertsection\@empty
         \usebeamerfont{frametitle}\small{\beamer@shorttitle}%
+        \else
+        \usebeamerfont{frametitle}\small{\insertsection}%
+        \fi
         \vfil}%
   \end{beamercolorbox}%
   \begin{beamercolorbox}[sep=0cm,ht=\headerheight,wd=0.4\paperwidth,center]{frametitle}
